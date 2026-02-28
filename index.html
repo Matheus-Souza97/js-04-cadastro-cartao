@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cadastrar Cartão</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+            <div class="card-container">
+                <div class="card" id="card">
+                    <div class="card-front">
+                        <img id="card-logo" src="" alt="Bandeira" class="card-logo">
+                        <img id="chip-img" src="img/chip.png" class="chip-img">
+                        <img id="contactless-img" src="img/contactless.png" class="contactless-img">
+
+                        <h3 id="card-number">0000 0000 0000 0000</h3>
+                        <p id="card-name">SEU NOME</p>
+                        <p id="card-date">00/00</p>
+                    </div>
+                    <div class="card-back">
+                        <div class="stripe"></div>
+                        <p id="card-cvc-string">cvc</p>
+                        <p id="card-cvc">000</p>
+                    </div>
+                </div>            
+            </div>
+
+            <form class="form">
+                    <input type="text" id="name" placeholder="Nome Completo" required>
+                    <input type="text" id="number" placeholder="Numero do Cartão" required>
+                    <div class="row">
+                        <input type="text" id="date" placeholder="Validade" required>
+                        <input type="text" id="cvc" placeholder="CVC" required>
+                    </div>          
+            </form>
+
+        <script src="script.js"></script>
+
+    </body>
+</html>
