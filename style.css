@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    font-family: Arial;    
+}
+
+ 
+
+.form {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-family: Arial;
+    margin-top: 60px;
+    font-size: 15px;
+    background: #333;
+    width: 600px;
+    height: 300px;
+    border-radius: 10px;
+    background: #dfdfe6;
+    box-shadow: 0 20px 20px rgba(0,0,0,0.3);
+    margin-top: 40px;
+}
+
+.row {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    width: 70%;
+    
+
+}
+
+.form input {
+    background: #f4f5fc;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    justify-content: left;
+}
+
+#name {
+    width: 70%;
+    margin: 15px;
+}
+
+#number {
+    width: 70%;
+    margin: 15px;
+}
+
+#date {
+    width: 20%;
+    margin: 15px;
+}
+
+#cvc {
+    width: 20%;
+    margin: 15px;   
+}
+
+.card-container {
+    width: 340px;
+    height: 220px;
+    perspective: 1000px;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+    
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    color: white;  
+}
+
+.card-front {
+    text-align: left;
+    justify-content: end;
+    padding: 20px;
+    background: linear-gradient(
+        135deg,
+        rgb(138, 5, 190),
+        rgb(110, 0, 170)
+    );
+    
+}
+
+.card-back {
+    background: linear-gradient(
+        135deg,
+        rgb(138, 5, 190),
+        rgb(110, 0, 170)
+    );
+    transform: rotateY(180deg);
+    
+}
+
+#card-cvc-string {
+    margin-left: 20px;
+    margin-bottom: 3px;
+}
+
+#card-cvc {
+    
+    margin-left: 20px;
+    
+}
+
+.stripe {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(168, 167, 167);
+    margin-bottom: 80px;
+}
+
+.card-logo {
+    width: 60px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: none;
+    
+}
+
+.chip-img {
+    width: 60px;
+    position: absolute;
+    top: 60px;
+    left: 40px;
+}
+
+.contactless-img {
+    width: 40px;
+    position: absolute;
+    top: 70px;
+    left: 110px;
+    filter: invert(1);
+}
